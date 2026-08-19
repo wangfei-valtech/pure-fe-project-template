@@ -12,12 +12,12 @@ pnpm run mock
 
 > 建议单独的窗口执行，方便和 dev 指令窗口区分开来，混淆在一个窗口不利于排查问题
 
-当前 MockServer 监听 `0.0.0.0:9999`，并同时启用 HTTP 和 WebSocket：
+当前 MockServer 监听 `0.0.0.0:8888`，并同时启用 HTTP 和 WebSocket：
 
 ```ts
 {
   host: "0.0.0.0",
-  port: 9999,
+  port: 8888,
   cors: true,
   cache: true,
   watch: true,
@@ -31,7 +31,7 @@ pnpm run mock
 }
 ```
 
-启动成功后，可以访问 http://127.0.0.1:9999/index 查看文件式 Mock 示例接口。
+启动成功后，可以访问 http://127.0.0.1:8888/index 查看文件式 Mock 示例接口。
 
 ## 本地接口转发
 
@@ -41,7 +41,7 @@ pnpm run mock
 /v:version(\d+)/:path* -> http://127.0.0.1:9999/v:version/:path*
 ```
 
-例如，浏览器请求 `/v1/a/b` 时，Next.js 会将其转发到 `http://127.0.0.1:9999/v1/a/b`。
+例如，浏览器请求 `/v1/a/b` 时，vite 会将其转发到 `http://127.0.0.1:9999/v1/a/b`。
 
 - `"/v1/"` 等版本化接口由本地 `mihawk` MockServer 处理。
 - 生产环境不启用这条 MockServer rewrite。
