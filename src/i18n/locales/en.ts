@@ -1,7 +1,7 @@
 export const en = {
   nav: {
     home: 'Home',
-    about: 'About'
+    about: 'About',
   },
   home: {
     title: 'Pure Frontend Template',
@@ -16,10 +16,10 @@ export const en = {
     hidden: 'Hidden details',
     shown: 'Details shown',
     env: 'Env',
-    api: 'API base'
+    api: 'API base',
   },
   about: {
     title: 'About',
-    text: 'Single-page app with history mode routing, i18n, Vitest and precommit quality gates.'
-  }
+    text: 'Single-page app with history mode routing, i18n, Vitest and precommit quality gates.',
+  },
 }

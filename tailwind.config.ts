@@ -24,11 +24,11 @@ const config: Config = {
         'destructive-foreground': 'hsl(var(--destructive-foreground))',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))'
-      }
-    }
+        ring: 'hsl(var(--ring))',
+      },
+    },
   },
-  plugins: []
+  plugins: [],
 }
 
 export default config

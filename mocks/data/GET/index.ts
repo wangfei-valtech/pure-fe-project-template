@@ -1,9 +1,9 @@
-"use strict";
+'use strict'
 /**
  * GET /
  * This file isn‘t mandatory. If it is not needed (such as when there is no need to modify response data), it can be deleted directly
  */
-import type { MhkCvtrExtra } from "mihawk/com-types";
+import type { MhkCvtrExtra } from 'mihawk/com-types'
 
 /**
  * Mock data resolve function, the original data source is the JSON file with the same name as this file
@@ -15,6 +15,7 @@ export default async function convertData(
   originData: Record<string, unknown>,
   _extra: MhkCvtrExtra,
 ) {
+  void _extra
   // 👇🏻 write your logic here...
-  return originData;
+  return originData
 }

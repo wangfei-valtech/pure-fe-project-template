@@ -1,6 +1,7 @@
 # 仓库规范
 
 ## 项目结构与模块组织
+
 这是一个 Vite + React + TypeScript 的前端模板（SPA）。
 
 - `src/main.tsx`：应用启动入口
@@ -17,6 +18,7 @@
 - `.env`、`.env.production`：环境变量（`VITE_*`）
 
 ## 构建、测试与开发命令
+
 - `pnpm install`：安装依赖
 - `pnpm dev`：启动开发服务器
 - `pnpm build`：类型检查并生成生产构建（`tsc -b && vite build`）
@@ -29,6 +31,7 @@
 - `pnpm lint-staged`：提交前处理暂存文件（Hook 调用）
 
 ## 代码风格与命名规范
+
 - 使用 TypeScript 与函数组件 + Hooks 风格开发。
 - 组件文件建议用 PascalCase（如 `HomePage.tsx`），工具模块用 camelCase（如 `utils.ts`）。
 - 优先使用 `@/...` 引入 `src/*`，减少深层相对路径。
@@ -37,6 +40,7 @@
 - ESLint 规则包含 React、TypeScript、Hooks 与 Prettier 联动。
 
 ## 页面设计规则（默认系统规则）
+
 - 涉及页面/界面设计时，以以下 3 个 SKILL 为强制参考顺序：
   - `frontend-design`
   - `design-taste-frontend`
@@ -50,6 +54,7 @@
 - 该规则用于本仓库前端页面设计与界面升级，不替代功能/架构方案决策。
 
 ## 主题切换说明
+
 - 项目支持 `light` 与 `dark` 两套主题。
 - 使用方式：
   - 状态与持久化逻辑放在 `src/hooks/useTheme.ts`。
@@ -58,12 +63,14 @@
 - `src/App.tsx` 当前已接入主题切换按钮（Sun/Moon 图标），可直接复用该交互。
 
 ## 测试规范
+
 - 测试框架：Vitest + Testing Library。
 - 测试文件放在 `src/` 下，命名 `*.test.ts` 或 `*.test.tsx`，靠近实现文件。
 - 合并前建议先跑 `pnpm test:run`。
 - 新增组件、Hooks、状态逻辑应覆盖关键行为路径，避免无意义的快照堆砌。
 
 ## 提交与 PR 规范
+
 - Git 提交消息由 Commitlint 校验（Conventional Commits），示例：
   - `feat: add language toggle`
   - `fix: correct route fallback`
@@ -72,5 +79,6 @@
 - 控制改动粒度，避免引入无关重构。
 
 ## 安全与配置说明
+
 - 不要把真实密钥提交到仓库，不要提交包含真实凭据的 `.env.local`。
 - 发布前比对 `.env` 与 `.env.production`，确认接口地址与环境差异。

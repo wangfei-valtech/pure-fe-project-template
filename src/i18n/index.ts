@@ -6,13 +6,13 @@ import { zh } from './locales/zh'
 i18n.use(initReactI18next).init({
   resources: {
     en: { translation: en },
-    zh: { translation: zh }
+    zh: { translation: zh },
   },
   lng: 'en',
   fallbackLng: 'en',
   interpolation: {
-    escapeValue: false
-  }
+    escapeValue: false,
+  },
 })
 
 export default i18n

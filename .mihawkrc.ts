@@ -1,8 +1,8 @@
 /**
  * @description: mihawk config
  */
-const host = "0.0.0.0";
-const port = 8888;
+const host = '0.0.0.0'
+const port = 8888
 
 //
 const config = {
@@ -12,14 +12,14 @@ const config = {
   cors: true,
   cache: true, // 同时控制 mock-logic 和 mock-data 的缓存
   watch: true,
-  mockDir: "mocks",
-  mockDataFileType: "json",
-  mockLogicFileType: "ts",
+  mockDir: 'mocks',
+  mockDataFileType: 'json',
+  mockLogicFileType: 'ts',
   autoCreateMockLogicFile: true,
   logConfig: null,
   socketConfig: {
     stomp: false,
   },
-};
+}
 
-export default config;
+export default config

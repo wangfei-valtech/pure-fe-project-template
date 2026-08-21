@@ -25,17 +25,13 @@ export function HomePage() {
       </div>
 
       <div className="space-x-2">
-        <Button onClick={() => setCount((prev) => prev + 1)}>
-          {t('home.increment')}
-        </Button>
+        <Button onClick={() => setCount((prev) => prev + 1)}>{t('home.increment')}</Button>
         <Button variant="secondary" onClick={() => setCount((prev) => prev - 1)}>
           {t('home.decrement')}
         </Button>
         <Button
           variant="outline"
-          onClick={() =>
-            i18n.changeLanguage(i18n.resolvedLanguage === 'en' ? 'zh' : 'en')
-          }
+          onClick={() => i18n.changeLanguage(i18n.resolvedLanguage === 'en' ? 'zh' : 'en')}
         >
           {i18n.resolvedLanguage === 'en' ? '切换中文' : 'Switch to English'}
         </Button>
